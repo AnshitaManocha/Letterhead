@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Full Page Background Image | CSS #2</title>
+
+    <style>
+
+        body{
+            background-color: black;
+        }
+        #container {
+            overflow: hidden; /* Clear the float */
+        }
+
+        #page-wrap {
+            position: relative;
+            z-index: 2;
+            width: calc(63% - 250px); /* Adjusted width to make space for the sticky image */
+            margin: 10px 0 0 30px; /* Removed the right margin and adjusted the left margin */
+            padding: 0px;
+            
+            -moz-box-shadow: 0 0 20px white;
+            -webkit-box-shadow: 0 0 20px white;
+            box-shadow: 0 0 20px white;
+            float: left;
+        }
+
+        #bg {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+        }
+
+        #bg img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            min-width: 50%;
+            min-height: 50%;
+        }
+
+        p {
+            font: 15px/2 Georgia, Serif;
+            margin: 0 0 20px 0;
+            text-indent: 20px;
+            font-size: 24px;
+            font-family:'roboto' ;
+            
+        }
+
+        .sticky-image {
+            width: 700px; /* Adjusted width for the sticky image */
+            height: 250px;
+            position: fixed;
+            top: 70px;
+            right: 20px; /* Positioned on the top right */
+             
+        }
+
+       #round{
+        border-radius: 100px;
+        
+
+       }
+       .box{  
+            position: fixed;
+            height: 130px;
+            width: 700px;
+            top: 610px;
+            right: 20px;
+            border: 2px blue solid;
+            border-radius: 20px;
+            background-image: linear-gradient(to bottom right, blue, black);
+            -moz-box-shadow: 0 0 10px blue;
+            -webkit-box-shadow: 0 0 10px blue;
+            box-shadow: 0 0 10px blue;   
+            color: aliceblue;
+            
+       }
+       a{
+        color: gold;
+        font-style: italic;
+        font-size: 202x;
+        
+       }
+       h1{
+        color: beige;
+        text-align: center;
+
+       }
+       
+       .top{
+        margin-left: 30px;
+        
+       }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+    <h1>Learning to love AI with AI Cell</h1>
+</div>
+    <div class="RGB" id="container">
+        <div id="page-wrap">
+            <!-- Your content here -->
+            <img src="images/Letterhead_page-0001.jpg" alt="" style="width: 100%; height:100%;">
+            <img src="images/Letterhead_page-0002.jpg" alt="" style="width: 100%; height:100%;">
+            <img src="images/Letterhead_page-0003.jpg" alt="" style="width: 100%; height:100%;">
+            <img src="images/Letterhead_page-0004.jpg" alt="" style="width: 100%; height:100%;">
+            <img src="images/Letterhead_page-0005.jpg" alt="" style="width: 100%; height:100%;">
+            <img src="images/Letterhead_page-0006.jpg" alt="" style="width: 100%; height:100%;">
+        </div>
+
+        <!-- Sticky image on the top right -->
+        <div class="sticky-image">
+            <img src="images/ring.gif" alt="" style="width: 100%; height:auto;" id="round">
+        </div>  
+        <div class="box">
+            <p>Interested? Fill the <a href="https://forms.gle/E8BiqY6ax2JfHBCp7">form</a> to join now!</p>
+            <p>For more questions contact us at: <a href="https://www.iare.ac.in/?q=content/artificial-intelligence-experience-center-aiec">Our Website</a></p>
+        </div>  
+    </div>
+</body>
+
+</html>
